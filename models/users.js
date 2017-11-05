@@ -1,6 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Users = sequelize.define('users', {
-
+  var Users = sequelize.define('users', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -37,7 +36,7 @@ module.exports = function (sequelize, DataTypes) {
     },
 
     image: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isUrl: true

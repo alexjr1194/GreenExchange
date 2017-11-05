@@ -16,6 +16,7 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
     "passport-facebook": "^2.1.1",
-    "sequelize": "^4.22.0"
+    "sequelize": "^4.22.0",
+    "sequelize-cli": "^3.0.0"
   }
 }

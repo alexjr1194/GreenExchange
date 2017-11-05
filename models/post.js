@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Post = sequelize.define('post', {
+  var Post = sequelize.define('post', {
 
     id: {
       type: DataTypes.INTEGER,
