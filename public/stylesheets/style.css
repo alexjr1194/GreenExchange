@@ -7,11 +7,30 @@ a {
   color: #00B7FF;
 }
 
-.droptarget {
+#dropbox {
     float: left; 
-    width: 100px; 
-    height: 35px;
-    margin: 15px;
-    padding: 10px;
+    width: 100%; 
+    height: 35%;
+    margin: 0 0 1% 0;
     border: 1px solid #aaaaaa;
+    text-align: center;
+}
+
+header {
+	background-color: rgb(124,252,0);
+}
+
+.pagehead {
+	text-decoration: underline;
+	font-weight: bold;
+	padding: 1% 0 0 1%;
+}
+
+#personalLinks {
+	background-color: rgb(0,100,0);
+	height: 100%
+}
+
+.listCatagories {
+	color: white;
 }

@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Green Exchange</title>
+		<link rel="stylesheet" href="../../public/stylesheets/style.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="/app.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+			<h2 class="pagehead">Green Exchange</h2>
+			<br>
+			<!-- navigation choices -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strain Search
+								<span class="caret"></span>
+							</button>
+			    			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			      				<a href="../views/feed.handlebars">Indica</a><br>
+			   					<a href="../views/feed.handlebars">Sativa</a><br>
+			   					<a href="../views/feed.handlebars">Hybrid</a>
+			   				</div>
+			   			</div>
+		  			</div>
+		  			<div class="col-md-3"></div>
+					<!-- text search -->
+					<div class="col-md-5">
+						<div class="input-group">
+						    <textarea class="form-control custom-control" rows="1" style="resize:none" id="textSearch"></textarea>     
+				    		<span class="input-group-addon btn btn-primary">Lookin For Dat Green</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</header> 
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">
+				<!-- create a listing -->
+				<div class="container">
+					<form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+						<!-- name -->
+						<div class="col-md-8">
+							<div class="form-group">
+								<h2>Name of Strain</h2>
+								<label for="nameOfStrain">Strain's Name: </label>
+								<textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+							</div>
+							<!-- type of strain - radio buttons -->
+							<fieldset class="form-group">
+				    			<legend>Type of Strain</legend>
+				    			<div class="form-check">
+				      				<label class="form-check-label">
+				        				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				        				Indica
+				      				</label>
+				    			</div>
+				    			<div class="form-check">
+				    				<label class="form-check-label">
+				        				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+				        				Sativa
+				     				</label>
+				    			</div>
+				    			<div class="form-check">
+				    				<label class="form-check-label">
+				        				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option3">
+				        				Hybrid
+				     				</label>
+				    			</div>				
+				  			</fieldset>
+				  			<!-- discription -->
+							<div class="form-group">
+								<h2>Tell us all about the high</h2>
+								<label for="discription">Discription: </label>
+								<textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+							</div>
+							<!-- image - drag and drop -->
+
+							<!-- <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">Drag and Drop a picture of your weed right here</div> -->
+
+								<div id="dropbox">Drag and Drop a picture of your weed right here</div>
+								<!-- submiting the form -->
+								<button type="submit" class="btn btn-primary" id="submitNewPost">Submit</button>
+							</fieldset>
+						</div>
+					</form>
+				</div>				
+			</div>
+			<!-- create listing -->
+			<div class="col-md-1"></div>
+			<div class="col-md-3" id="personalLinks">
+				<div class="container">
+			  		<h3 class="listCatagories">Show What I Got</h3>
+					<a href="/views/newPost.handlebars" class="btn btn-info" id="createListing" role="button">Create a Listing</a>
+				</div>
+				<!-- go to my listings -->
+				<div class="container">
+			  		<h3 class="listCatagories">See My Sh*t</h3>
+					<a href="/views/partials/myPosts.handlebars" class="btn btn-info" id="createListing" role="button">My Trees</a>
+				</div>
+			</div>
+		</div>
+	</div>			  				
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="../../logic.js"></script>
+</body>
+</html>	

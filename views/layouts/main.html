@@ -3,50 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Green Exchange</title>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../public/stylesheets/style.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="/app.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<header>
-		<h2>Green Exchange</h2>
-		<br>
-		<!-- navigation choices -->
+		<div class="container-fluid">
+			<h2 class="pagehead">Green Exchange</h2>
+			<br>
+			<!-- navigation choices -->
 			<div class="container">
-				<div class="dropdown">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strain Search
-						<span class="caret"></span>
-					</button>
-    				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      					<a class="dropdown-item" href="../views/feed.handlebars">Indica</a><br>
-   						<a href="../views/feed.handlebars">Sativa</a><br>
-      					<a href="../views/feed.handlebars">Hybrid</a>
-    				</div>
-  				</div>
-  			</div>
-  			<br>
-			<!-- text search -->
-			<div class="container">
-				<div class="input-group">
-				    <textarea class="form-control custom-control" rows="1" style="resize:none" id="textSearch"></textarea>     
-	    			<span class="input-group-addon btn btn-primary">Lookin For Dat Green</span>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Strain Search
+								<span class="caret"></span>
+							</button>
+		    				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		      					<a href="../views/feed.handlebars">Indica</a><br>
+			   					<a href="../views/feed.handlebars">Sativa</a><br>
+			      				<a href="../views/feed.handlebars">Hybrid</a>
+			    			</div>
+			    		</div>
+		  			</div>
+		  			<div class="col-md-3"></div>
+					<!-- text search -->
+					<div class="col-md-5">
+						<div class="input-group">
+						    <textarea class="form-control custom-control" rows="1" style="resize:none" id="textSearch"></textarea>     
+				    		<span class="input-group-addon btn btn-primary">Lookin For Dat Green</span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</nav>
+		</div>
+		<br>
 	</header> 
-	{{!-- create listing --}}
-	<div class="container">
-  		<h3>Show What I Got</h3>
-		<a href="/views/newPost.handlebars" class="btn btn-info" id="createListing" role="button">Create a Listing</a>
+	<!-- create listing -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9"></div>
+			<div class="col-md-3" id="personalLinks">
+				<div class="container">
+			  		<h3 class="listCatagories">Show What I Got</h3>
+					<a href="/views/newPost.handlebars" class="btn btn-info" id="createListing" role="button">Create a Listing</a>
+				</div>
+				<!-- go to my listings -->
+				<div class="container">
+			  		<h3 class="listCatagories">See My Sh*t</h3>
+					<a href="/views/partials/myPosts.handlebars" class="btn btn-info" id="createListing" role="button">My Trees</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- go to my listings -->
-	<div class="container">
-  		<h3>See My Sh*t</h3>
-		<a href="/views/partials/myPosts.handlebars" class="btn btn-info" id="createListing" role="button">My Trees</a>
-	</div>
-
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="../../logic.js"></script>
 </body>
 </html>	

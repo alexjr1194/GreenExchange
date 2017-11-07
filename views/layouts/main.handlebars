@@ -3,58 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Green Exchange</title>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/stylesheets/style.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="/app.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<header>
-		<h2>Green Exchange</h2>
-		<br>
-		<!-- navigation choices -->
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<div id="dropdownSearch" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Strains <span class="caret"></span></a>	
-								<ul class="dropdown">
-									<li>
-										<a href="/views/layouts/indica.handlebars">Indica</a>
-									</li>
-									<li>
-										<a href="/views/layouts/sativa.handlebars">Sativa</a>
-									</li>
-									<li>
-										<a href="/views/layouts/hybrid.handlebars">Hybrid</a>
-									</li>			
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- text search -->
-			<div class="container">
-				<div class="input-group">
-				    <textarea class="form-control custom-control" rows="1" style="resize:none" id="textSearch"></textarea>     
-	    			<span class="input-group-addon btn btn-primary">Lookin For Dat Green</span>
-				</div>
-			</div>
-		</nav>
-	</header> 
-	{{!-- create listing --}}
-	<div class="container">
-  		<h3>Show What I Got</h3>
-		<a href="/views/newPost.handlebars" class="btn btn-info" id="createListing" role="button">Create a Listing</a>
-	</div>
-	<!-- go to my listings -->
-	<div class="container">
-  		<h3>See My Sh*t</h3>
-		<a href="/views/partials/myPosts.handlebars" class="btn btn-info" id="createListing" role="button">My Trees</a>
-	</div>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	{{{ body }}}
+
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/path/to/handlebars.min.js"></script>
+	<script type="text/javascript" src="../../logic.js"></script>
 </body>
 </html>	

@@ -24,6 +24,8 @@ CREATE TABLE hybrid (
 	PRIMARY KEY (id) 
 ); 
 
+
+
 INSERT INTO indica (name, type) 
 VALUES ("super powered harry purple eater", sativa);
 
