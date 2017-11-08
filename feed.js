@@ -1,29 +1,37 @@
-// storing values for feed
-var $feedArea = $(".feedArea");
+/*var db = require('/user.js');
 
-$( document ).ready(function() {
-    // Get listing from database when page loads   
-    getData();
- 
-	var dataForFeed = [];  
 
-	// reset feed with feed from DB   
-	function initializeRows() {     
-		$feedArea.empty();     
-		var rowsToAdd = [];     
-		for (var i = 0; i < dataForFeed.length; i++) {       
-			rowsToAdd.push(createNewRow(dataForFeed[i]));     
-		}     
-		// this should add the listings to the list in order of last to first
-		$feedArea.prepend(rowsToAdd);   
-	}
+app.get('/orders', function(request, response) {
+  db.Post.findAll().success(function(orders) {
+    var post_json = [];
+    post.forEach(function(order) {
+      orders_json.push({id: order.id, weed_type: order.amount, time: order.time});
+    });
+    // Uses views/orders.ejs
+    response.render("feed", {orders: orders_json});
+  }).error(function(err) {
+    console.log(err);
+    response.send("error retrieving orders");
+  });
+});*/
 
-	// grabbing and updating the feed area
-	function getData() {     
-		$.get(" /*notSureWhereToPointThis*/ ", function(data) {       
-			dataForFeed = data;       
-			initializeRows();     
-		});   
-	}
 
-});
+
+<h2>Recent Posts</h2> 
+
+<ul>   
+	{{#each Posts}}     
+		{{#if strain.type === sativa}} 
+			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
+			<img>{{image.type}}</img>
+		{{/if}}
+		{{#else if strain.type === indica}}
+			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
+			<img>{{image.type}}</img>
+		{{/if}}
+		{{#else}}
+			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
+			<img>{{image.type}}</img>
+		{{/if}}
+	{{/each}}
+</ul> 
