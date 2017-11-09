@@ -1,0 +1,10 @@
+<h2>My Posts</h2> 
+
+<ul>   
+	{{#each Posts}}     
+		{{#if user.firstname == Post.associate}}
+			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
+			<img>{{image.type}}</img>
+		{{/if}}
+	{{/each}}
+</ul> 
