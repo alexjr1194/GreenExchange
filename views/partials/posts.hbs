@@ -1,0 +1,12 @@
+<h2>All Posts</h2>
+<ul>
+	{{#each postList}}
+	  <li>
+	      <p>Type: {{weed_type}}</p>
+	      <p>Strain: {{strain}}</p>
+	      <p>Description: {{description}}</p>
+	      <img src='/static/img/{{upl}}'>
+	      <hr>
+	  </li>
+	{{/each}}
+</ul>

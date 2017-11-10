@@ -1,8 +1,7 @@
-<h2>My Posts</h2> 
 
-<ul>   
+<ul>
 	{{#each Posts}}     
-		{{#if user.firstname === Post.associate}}
+		{{#if textSearch === strain}} 
 			<li>
 	      		<p>Type: {{weed_type}}</p>
 	      		<p>Strain: {{strain}}</p>
@@ -10,6 +9,9 @@
 	      		<img src='/static/img/{{upl}}'>
 	      		<hr>
   			</li>
+			<img src='/static/img/{{upl}}'>
+		{{else}}
+			<h3>Sorry, but no one is offering the strain you are looking for.</h3>
 		{{/if}}
 	{{/each}}
-</ul> 
+</ul>

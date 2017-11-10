@@ -3,16 +3,30 @@
 <ul>   
 	{{#each Posts}}     
 		{{#if strain.type === sativa}} 
-			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
-			<img>{{image.type}}</img>
-		{{/if}}
+			<li>
+	      		<p>Type: {{weed_type}}</p>
+	      		<p>Strain: {{strain}}</p>
+	      		<p>Description: {{description}}</p>
+	      		<img src='/static/img/{{upl}}'>
+	      		<hr>
+  			</li>
 		{{#else if strain.type === indica}}
-			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
-			<img>{{image.type}}</img>
-		{{/if}}
+			<li>
+		     	<p>Type: {{weed_type}}</p>
+		      	<p>Strain: {{strain}}</p>
+		   		<p>Description: {{description}}</p>
+		    	<img src='/static/img/{{upl}}'>
+		      	<hr>
+	  		</li>
 		{{#else}}
-			<h3>{{weed_type.type}} <br> {{strain.type}} <br> {{discription.type}} <br> {{date_created.type}}</h3>
-			<img>{{image.type}}</img>
+			<li>
+	      		<p>Type: {{weed_type}}</p>
+	      		<p>Strain: {{strain}}</p>
+	      		<p>Description: {{description}}</p>
+	      		<img src='/static/img/{{upl}}'>
+	      		<hr>
+  			</li>
+			<!-- <img>{{image.type}}</img> -->
 		{{/if}}
 	{{/each}}
 </ul> 

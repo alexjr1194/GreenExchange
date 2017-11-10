@@ -1,3 +1,62 @@
 <h1>{{username}}</h1>
 <h2>Dashboard</h2>
 <h5>You are logged in. Good Job!</h5>
+
+<div class="col-md-8"></div>
+<div class="dropdownMenus col-md-4">
+	<div class='form-field'>
+		<label for='weed_typeFilter'>Type of Cronic</label>
+		<select id='weed_typeFilter' class='form-control'>
+		    <option>Indica</option>}
+		    {{#each indica}}
+      			<option value="{{indica}}">{{strain.type}}</option>
+<!--       			I'm coding blind. If it's not indica then the option value is {{this}} -->
+      		{{/each}}
+    	</select>
+  	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8"></div>
+			<div class="col-md-4">
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Cronic
+						<span class="caret"></span>
+					</button>
+		    		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<select id='weed_typeFilter' class='form-control'>
+		    				<option>Indica</option>
+		    				{{#each weed_type.indica}}
+      							<option value="{{indica}}">{{strain.type}}</option>
+<!--       			I'm coding blind. If it's not indica then the option value is {{this}} -->
+      						{{/each}}
+    					</select>
+    					<select id='weed_typeFilter' class='form-control'>
+		    				<option>Sativa</option>
+		    				{{#each weed_type.sativa}}
+      							<option value="{{indica}}">{{strain.type}}</option>
+<!--       			I'm coding blind. If it's not indica then the option value is {{this}} -->
+      						{{/each}}
+    					</select>
+    					<select id='weed_typeFilter' class='form-control'>
+		    				<option>Hybrid</option>
+		    				{{#each weed_type.hybrid}}
+      							<option value="{{indica}}">{{strain.type}}</option>
+<!--       			I'm coding blind. If it's not indica then the option value is {{this}} -->
+      						{{/each}}
+    					</select>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-4">
+        <div class="input-group">
+            <textarea class="form-control custom-control" rows="1" style="resize:none" id="textSearch"></textarea>     
+            <span class="input-group-addon btn btn-primary" id="searchButton">Search</span>
+        </div>
+    </div>
+</form>
